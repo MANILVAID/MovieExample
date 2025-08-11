@@ -1,0 +1,8 @@
+<h2>Admin Dashboard</h2>
+<a href="{{ url_for('add_movie') }}">Add Movie</a>
+<a href="{{ url_for('logout') }}">Logout</a>
+<ul>
+{% for key, movie in movies.items() %}
+  <li><b>{{ movie.title }}</b>: {{ movie.description }}</li>
+{% endfor %}
+</ul>
